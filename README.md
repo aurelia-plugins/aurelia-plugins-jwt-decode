@@ -55,7 +55,7 @@ const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwi
 JwtDecode.decode(token);
 ```
 
-The following example has a token which only contains a payload. Use the option `header = false` to decode the token.
+The following example has a token which only contains a payload. Use the option `header: false` to decode the token.
 
 ```javascript
 const token = 'eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9';
