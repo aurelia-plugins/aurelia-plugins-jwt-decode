@@ -7,19 +7,29 @@ A JWT Decode plugin for Aurelia.
 **Webpack/Aurelia CLI**
 
 ```shell
-npm install aurelia-jwt-decode --save
+npm install aurelia-plugins-jwt-decode --save
+```
+
+When using Aurelia CLI add the following dependency to `aurelia.json`:
+
+```json
+{
+  "name": "aurelia-plugins-jwt-decode",
+  "path": "../node_modules/aurelia-plugins-jwt-decode/dist/amd",
+  "main": "aurelia-plugins-jwt-decode"
+}
 ```
 
 **JSPM**
 
 ```shell
-jspm install aurelia-jwt-decode
+jspm install aurelia-plugins-jwt-decode
 ```
 
 **Bower**
 
 ```shell
-bower install aurelia-jwt-decode
+bower install aurelia-plugins-jwt-decode
 ```
 
 ## Configuration
