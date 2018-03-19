@@ -1,9 +1,9 @@
 'use strict';
 
-System.register([], function (_export, _context) {
+System.register(['jwt-decode'], function (_export, _context) {
   "use strict";
 
-  var JwtDecode;
+  var jwt_decode, JwtDecode;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -12,7 +12,9 @@ System.register([], function (_export, _context) {
   }
 
   return {
-    setters: [],
+    setters: [function (_jwtDecode) {
+      jwt_decode = _jwtDecode.default;
+    }],
     execute: function () {
       _export('JwtDecode', JwtDecode = function () {
         function JwtDecode() {
@@ -22,12 +24,7 @@ System.register([], function (_export, _context) {
         JwtDecode.decode = function decode(token) {
           var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { header: true };
 
-          var position = options.header ? 1 : 0;
-          try {
-            return JSON.parse(atob(token.split('.')[position]));
-          } catch (e) {
-            return null;
-          }
+          return jwt_decode(token, options);
         };
 
         return JwtDecode;
