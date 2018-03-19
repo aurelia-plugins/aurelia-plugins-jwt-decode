@@ -26,7 +26,7 @@ define(['exports', 'jwt-decode'], function (exports, _jwtDecode) {
     }
 
     JwtDecode.decode = function decode(token) {
-      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { header: true };
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { header: false };
 
       return (0, _jwtDecode2.default)(token, options);
     };

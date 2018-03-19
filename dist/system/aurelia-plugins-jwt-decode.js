@@ -22,7 +22,7 @@ System.register(['jwt-decode'], function (_export, _context) {
         }
 
         JwtDecode.decode = function decode(token) {
-          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { header: true };
+          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { header: false };
 
           return jwt_decode(token, options);
         };
