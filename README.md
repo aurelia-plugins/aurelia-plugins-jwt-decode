@@ -2,7 +2,7 @@
 
 A JWT Decode plugin for Aurelia.
 
-**This plugin is deprecated. Please us [jwt-decode](https://github.com/auth0/jwt-decode) from Auth0.**
+**This plugin is deprecated. Please use [jwt-decode](https://github.com/auth0/jwt-decode) from Auth0.**
 
 ## Installation
 
