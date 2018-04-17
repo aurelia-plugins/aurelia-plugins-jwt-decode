@@ -2,7 +2,7 @@
 
 A JWT Decode plugin for Aurelia.
 
-**This plugin is deprecated. Please use [jwt-decode](https://github.com/auth0/jwt-decode) from Auth0.**
+**This plugin uses [jwt-decode](https://github.com/auth0/jwt-decode) from Auth0 under the hood.**
 
 ## Installation
 
@@ -21,6 +21,8 @@ When using Aurelia CLI add the following dependency to `aurelia.json`:
   "main": "aurelia-plugins-jwt-decode"
 }
 ```
+
+Add `node_modules/babel-polyfill/dist/polyfill.min.js` to the prepend list in `aurelia.json`. Do not forgot to add `babel-polyfill` to the dependencies in `package.json`.
 
 **JSPM**
 
@@ -57,7 +59,7 @@ export class App {
 
 ### Header
 
-A `boolean` indicating if the header part of the JWT is not present. By default the header option is `false`.
+A `boolean` indicating if the header part of the JWT is not present. By default the header option is `false`, and present.
 
 This example uses the default option because the token contains besides the payload also the header and the signature.
 
@@ -67,7 +69,7 @@ const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwi
 JwtDecode.decode(token);
 ```
 
-The following example has a token which only contains a payload. Use the option `header: true` to decode the token.
+The following example has a token which only contains a payload. Use the option `header: true` to decode the token which has no header.
 
 ```javascript
 const token = 'eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9';

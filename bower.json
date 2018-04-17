@@ -1,6 +1,6 @@
 {
   "name": "aurelia-plugins-jwt-decode",
-  "version": "2.5.3",
+  "version": "2.6.0",
   "description": "A JWT Decode plugin for Aurelia.",
   "keywords": [
     "aurelia",
@@ -13,7 +13,7 @@
   "homepage": "https://github.com/aurelia-plugins/aurelia-plugins-jwt-decode",
   "license": "MIT",
   "authors": [
-    "Bart Lenaerts <bart@codious.io> (http://codious.io/)"
+    "Bart Lenaerts <bart@codious.io> (https://codious.io/)"
   ],
   "moduleType": "node",
   "main": "dist/commonjs/aurelia-plugins-jwt-decode.js",
@@ -22,6 +22,6 @@
     "url": "git://github.com/aurelia-plugins/aurelia-plugins-jwt-decode.git"
   },
   "dependencies": {
-    "jwt-decode": "2.2.0"
+    "jwt-decode": "^2.2.0"
   }
 }
